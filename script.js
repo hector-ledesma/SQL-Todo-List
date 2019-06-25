@@ -3,7 +3,6 @@ const list = document.getElementById("list");
 const item = document.getElementsByClassName("item");
 const input = document.getElementById("addItem");
 const delBtn = document.getElementsByClassName("delete");
-const check = document.getElementById("checkSize");
 
 
 
@@ -15,7 +14,7 @@ const check = document.getElementById("checkSize");
         {
             console.log(`You just submitted ${input.value}`);
             //Store the value
-            x = `<span class="delete">DELETE</span> ${input.value}`;
+            x = input.value;
             //Create an li element
             let newLi = document.createElement("li");
             //Assign content to li
@@ -32,28 +31,29 @@ const check = document.getElementById("checkSize");
         }
     });
 
-check.addEventListener("click", () => {
-    console.log(item.length);
-})
+
+   
+//Loops through existing items
+for (let i=0;i < item.length ;i++) 
+   {
+       //Adds event listener to delete items
+       delBtn[i].addEventListener("click", function () 
+       {
+           console.log(item[i]);
+           item[i].parentNode.removeChild(item[i]);
+       })
+
+       
+       item[i].addEventListener("click", () => 
+       {
+           item[i].classList.toggle("selected");
+       });
+       
+   }
 
 function addListener(element) {
-    const rem = element.childNodes[0];
     element.addEventListener("click", () => 
         {
             element.classList.toggle("selected");
         });
-    rem.addEventListener("click", () => {
-        console.log(this);
-        rem.parentNode.remove();
-    })
-}
-
-function toggleClass() {
-    this.classList.toggle("selected");
-}
-
-function delFunction() {
-    for(let i = 0; i < item.length; i++) {
-        item[i].parentNode.removeChild(item[i]);
-    }
 }
