@@ -15,7 +15,7 @@ const check = document.getElementById("checkSize");
         {
             console.log(`You just submitted ${input.value}`);
             //Store the value
-            x = `<span class="delete">DELETE</span> ${input.value}`;
+            x = `<span class="delete">DELETE</span><span class="edit">EDIT</span> ${input.value}`;
             //Create an li element
             let newLi = document.createElement("li");
             //Assign content to li
@@ -36,6 +36,7 @@ check.addEventListener("click", () => {
     console.log(item.length);
 })
 
+
 function addListener(element) {
     const rem = element.childNodes[0];
     element.addEventListener("click", () => 
@@ -50,10 +51,4 @@ function addListener(element) {
 
 function toggleClass() {
     this.classList.toggle("selected");
-}
-
-function delFunction() {
-    for(let i = 0; i < item.length; i++) {
-        item[i].parentNode.removeChild(item[i]);
-    }
 }

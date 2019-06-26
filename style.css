@@ -43,3 +43,10 @@ ul .selected {
     font-weight: bold;
     padding:10px;
 }
+
+.edit {
+    background-color:blue;
+    color:white;
+    font-weight: bold;
+    padding:10px;
+}
