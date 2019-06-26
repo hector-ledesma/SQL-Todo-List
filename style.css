@@ -50,3 +50,9 @@ ul .selected {
     font-weight: bold;
     padding:10px;
 }
+
+.editInput {
+    width: 100%;
+    float:left;
+    margin: 1rem .25rem;
+}
