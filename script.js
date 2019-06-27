@@ -1,6 +1,3 @@
-import getList from './app';
-
-
 const list = document.getElementById("list");
 const item = document.getElementsByClassName("item");
 const input = document.getElementById("addItem");
@@ -10,7 +7,7 @@ const check = document.getElementById("checkSize");
 
 
 
-console.log(getList);
+
 
 //Listens for a key event (Pressing Enter)
     input.addEventListener("keydown", (event) => 

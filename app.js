@@ -14,7 +14,7 @@ connection.connect((err) => {
     console.log('connected as id ' + connection.threadId);
 });
 
-export let getList = connection.query('SELECT * FROM items', (err, result, field) => {
+connection.query('SELECT * FROM items', (err, result, field) => {
     if (err) throw err;
     console.log("This is result: ");
     result.forEach((res) => {
