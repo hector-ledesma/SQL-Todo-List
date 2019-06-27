@@ -1,4 +1,6 @@
-let x;
+import getList from './app';
+
+
 const list = document.getElementById("list");
 const item = document.getElementsByClassName("item");
 const input = document.getElementById("addItem");
@@ -7,6 +9,8 @@ const editBtn = document.getElementsByClassName("edit");
 const check = document.getElementById("checkSize");
 
 
+
+console.log(getList);
 
 //Listens for a key event (Pressing Enter)
     input.addEventListener("keydown", (event) => 

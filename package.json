@@ -1,0 +1,22 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "Project focusing on DOM manipulation and using SQL databases",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazi89/SQL-Todo-List.git"
+  },
+  "author": "Hector Ledesma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mazi89/SQL-Todo-List/issues"
+  },
+  "homepage": "https://github.com/mazi89/SQL-Todo-List#readme",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
