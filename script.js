@@ -8,7 +8,6 @@ const check = document.getElementById("checkSize");
 
 
 
-
 //Listens for a key event (Pressing Enter)
     input.addEventListener("keydown", (event) => 
     {

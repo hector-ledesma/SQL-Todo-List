@@ -14,10 +14,18 @@ connection.connect((err) => {
     console.log('connected as id ' + connection.threadId);
 });
 
-connection.query('SELECT * FROM items', (err, result, field) => {
+listItems = connection.query('SELECT * FROM items', (err, result, field) => {
     if (err) throw err;
+
     console.log("This is result: ");
     result.forEach((res) => {
         console.log(res.item);
     })
 })
+
+
+connection.end((err) => {
+
+});
+
+export { listItems };
